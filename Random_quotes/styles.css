@@ -22,7 +22,8 @@ html, body {
     text-align: center;
     font-size: 14px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-left: 30px;
     transition: background-color 0.3s, transform 0.3s; 
 }
 
@@ -43,10 +44,17 @@ html, body {
     align-items: center; 
 }
 
+.row {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+}
+
 #text {
     width: 70%;
     margin: 0 auto;
     font-size: 1.5em;
     text-align: center;
     font-family: 'Outfit', sans-serif;
+    margin-bottom: 24px;
 }
