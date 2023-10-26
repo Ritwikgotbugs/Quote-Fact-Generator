@@ -3,7 +3,6 @@ html, body {
     padding: 0;
 }
 
-
 #display {
     display: flex;
     justify-content: center;
@@ -15,28 +14,27 @@ html, body {
     background-repeat: no-repeat;
 }
 
-
-#fact {
+.button {
     background-color: #212121;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 12px 24px; 
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 10px;
     margin-top: 50px;
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
+.button:hover {
+    background-color: #111; 
+    transform: scale(1.1); 
+}
 
-#quote {
-    background-color: #212121;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 10px;
-    margin-top: 50px;
+.button:active {
+    background-color: black;
+    color: white; 
+    transform: scale(1); 
 }
 
 .column {
@@ -52,4 +50,3 @@ html, body {
     text-align: center;
     font-family: 'Outfit', sans-serif;
 }
-
