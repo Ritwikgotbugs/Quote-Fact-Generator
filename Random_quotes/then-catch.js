@@ -6,9 +6,9 @@ function generateQuote() {
     })
       .then(response => response.json())
       .then(data => {
-        var randomIndex = Math.floor(Math.random() * data.length);
-        var quote = data[randomIndex].quote;
-        var quote = '"' + quote + '"';
+        const randomIndex = Math.floor(Math.random() * data.length);
+        let quote = data[randomIndex].quote;
+        quote = '"' + quote + '"';
         document.getElementById('text').textContent = quote;
       })
       .catch(error => {
