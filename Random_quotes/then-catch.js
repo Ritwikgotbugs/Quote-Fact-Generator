@@ -11,8 +11,8 @@ function generateQuote() {
         quote = '"' + quote + '"';
         document.getElementById('text').textContent = quote;
       })
-      .catch(error => {
-        console.error('Error in generating Quote');
+      .catch(() => {
+        document.getElementById('text').textContent = 'Error occurred while generating the quote.';
       });
   }
   
