@@ -1,13 +1,29 @@
-const limit = 1; // Define the limit
+const limit = 1; 
+let request = false;
 
 async function getFacts(limit) {
-    const response = await fetch(`https://api.api-ninjas.com/v1/facts?limit=${limit}`, {
-        headers: { 'X-Api-Key': '0lAora48t99zuI7tWeiAoA==61EUmZBNtWI4oyN8' },
-    });
 
-    const result = await response.json();
+    if (request) {
+        return;
+    }
 
-    return result;
+    request = true;
+
+    try {
+        const response = await fetch(`https://api.api-ninjas.com/v1/facts?limit=${limit}`, {
+          headers: { 'X-Api-Key': '0lAora48t99zuI7tWeiAoA==61EUmZBNtWI4oyN8' },
+        });
+    
+        const result = await response.json();
+    
+        return result;
+
+      } catch {
+        throw document.getElementById('text').textContent = 'Error occurred while generating the fact';
+
+      } finally {
+        request = false;
+      }
 }
 
 const button = document.querySelector('#fact');
