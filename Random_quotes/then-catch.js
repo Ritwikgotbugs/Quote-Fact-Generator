@@ -12,7 +12,7 @@ function generateQuote() {
         document.getElementById('text').textContent = quote;
       })
       .catch(error => {
-        console.error('Error: ', error);
+        console.error('Error in generating Quote');
       });
   }
   
