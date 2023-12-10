@@ -1,5 +1,7 @@
-const limit = 1; 
+const limit = 1;
 let request = false;
+
+
 
 async function getFacts(limit) {
 
@@ -11,19 +13,19 @@ async function getFacts(limit) {
 
     try {
         const response = await fetch(`https://api.api-ninjas.com/v1/facts?limit=${limit}`, {
-          headers: { 'X-Api-Key': '0lAora48t99zuI7tWeiAoA==61EUmZBNtWI4oyN8' },
+            headers: { 'X-Api-Key': '0lAora48t99zuI7tWeiAoA==61EUmZBNtWI4oyN8' },
         });
-    
+
         const result = await response.json();
-    
+
         return result;
 
-      } catch {
+    } catch {
         throw document.getElementById('text').textContent = 'Error occurred while generating the fact';
 
-      } finally {
+    } finally {
         request = false;
-      }
+    }
 }
 
 const button = document.querySelector('#fact');

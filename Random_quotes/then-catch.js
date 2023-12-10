@@ -1,4 +1,5 @@
 let requestInProgress = false;
+//require('dotenv').config();
 
 function generateQuote() {
   if (requestInProgress) {
