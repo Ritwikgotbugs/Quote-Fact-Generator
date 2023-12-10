@@ -10,7 +10,7 @@ function generateQuote() {
 
     fetch(`https://api.api-ninjas.com/v1/quotes?category=computers`, {
       headers: {
-        'X-Api-Key': '0lAora48t99zuI7tWeiAoA==61EUmZBNtWI4oyN8',
+        'Api_Key': '0lAora48t99zuI7tWeiAoA==61EUmZBNtWI4oyN8',
       },
     })
       .then(response => response.json())
