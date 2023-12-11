@@ -13,7 +13,7 @@ async function getFacts(limit) {
 
     try {
         const response = await fetch(`https://api.api-ninjas.com/v1/facts?limit=${limit}`, {
-            headers: { 'Api_Key': '0lAora48t99zuI7tWeiAoA==61EUmZBNtWI4oyN8' },
+            headers: { 'X-Api-Key': '0lAora48t99zuI7tWeiAoA==61EUmZBNtWI4oyN8' },
         });
 
         const result = await response.json();
